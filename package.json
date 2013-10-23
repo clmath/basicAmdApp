@@ -1,0 +1,11 @@
+{
+  "name": "dumbApp",
+  "version": "0.1.0",
+  "dependencies": {
+    "requirejs": "~2.1.9"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-dojo-build": "~0.1.0"
+  }
+}
