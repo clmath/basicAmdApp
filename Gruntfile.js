@@ -10,14 +10,30 @@ module.exports = function(grunt) {
 		concatAmd: {
 			default_options: {}
 		},
-		out: "dist/"
+		preUglify: {
+			default_options: {}
+		},
+		out: "dist/",
+		uglify: {
+			options: {
+				sourceMap: 'dist/source-map.js',
+				sourceMapRoot: '../',
+				sourceMappingURL: './source-map.js'
+				
+			},
+			default_options: {}
+		}
 		
 	});
 
   // Load the plugin that provides the "dojo" task.
   grunt.loadNpmTasks('grunt-dojo-build');
-
+  
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  		
   // Default task(s).
   grunt.registerTask('default', ['dojo_build']);
+  grunt.registerTask('dojo_uglify', ['depsScan', 'preUglify', 'uglify']);
+  
 	  
 };
