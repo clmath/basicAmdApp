@@ -1,5 +1,7 @@
-define([], function(){
-	return {
-		log: function(){console.log("bar");}
-	}
+define([], function () {
+    return {
+        log: function () {
+            console.log("bar");
+        }
+    };
 });
